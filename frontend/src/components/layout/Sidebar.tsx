@@ -36,31 +36,7 @@ export const Sidebar = () => {
   const location = useLocation();
   const path = location.pathname;
   const navigate = useNavigate();
-  const isJobsActive = () => {
-    // Define an array of subpaths that should activate the "/jobs" menu item
-    const subpathsToActivateJobs = [
-      "/mail-inbox",
-      "/job-queue",
-      "/un-assigned-jobs",
-      "/data-parsing",
-      "/check-point",
-      "/on-hold",
-      "/jobs-ignored",
-    ];
 
-    // Check if the current path is "/jobs" or if it starts with one of the subpaths
-    return subpathsToActivateJobs.some((subpath) =>
-      path.startsWith(`${subpath}`)
-    );
-  };
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const isSettingsActive = () => {
-    // Define the path for the "Settings" menu item
-    const settingsPath = "/settings";
-
-    // Check if the current path is "/settings" or if it starts with the "/settings" path
-    return path === settingsPath || path.startsWith(`${settingsPath}/`);
-  };
   return (
     <Drawer
       PaperProps={{
