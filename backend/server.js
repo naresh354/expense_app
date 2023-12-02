@@ -7,7 +7,7 @@ app.use(cors())
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://winter:winter98@cluster0.sirsd.mongodb.net/expense?retryWrites=true&w=majority").then(() => console.log("MongoDB run suceessfully")).catch(err => console.log(err))
+mongoose.connect("").then(() => console.log("MongoDB run suceessfully")).catch(err => console.log(err))
 
 
 
